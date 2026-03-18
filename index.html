@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ahmed Ahon — Tech Founder, Designer, and Student Leader from Dhaka, Bangladesh." />
+  <title>Ahmed Ahon — Tech Founder & Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="icon.png" />
+</head>
+
+<body class="theme-dark">
+
+  <!-- Global overlays -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="noise-overlay"></div>
+  <div class="gradient-mesh"></div>
+
+  <!-- ════════════════════════════════════════
+       FLOATING SIDE NAV (vertical pill)
+  ════════════════════════════════════════ -->
+  <nav class="side-nav" id="sideNav">
+    <!-- Theme switcher at top -->
+    <div class="sn-theme-wrap" id="snThemeWrap">
+      <button class="sn-theme-btn" id="snThemeBtn" aria-label="Switch theme">
+        <span class="sn-orb" id="snOrb"></span>
+      </button>
+      <div class="sn-theme-dropdown" id="snThemeDropdown">
+        <div class="sn-theme-label">Theme</div>
+        <button class="sn-td-opt active" data-theme="theme-dark">
+          <span class="sn-swatch td-dark"></span><span>Futuristic</span><span class="sn-check">✓</span>
+        </button>
+        <button class="sn-td-opt" data-theme="theme-minimal">
+          <span class="sn-swatch td-minimal"></span><span>Minimal</span><span class="sn-check">✓</span>
+        </button>
+        <button class="sn-td-opt" data-theme="theme-glass">
+          <span class="sn-swatch td-glass"></span><span>Glass</span><span class="sn-check">✓</span>
+        </button>
+        <button class="sn-td-opt" data-theme="theme-neo">
+          <span class="sn-swatch td-neo"></span><span>Brutalist</span><span class="sn-check">✓</span>
+        </button>
+        <button class="sn-td-opt" data-theme="theme-liquid">
+          <span class="sn-swatch td-liquid"></span><span>Liquid</span><span class="sn-check">✓</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="sn-divider"></div>
+
+    <!-- Nav links -->
+    <ul class="sn-links">
+      <li>
+        <a href="#home" class="sn-link active" data-label="Home">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#about" class="sn-link" data-label="About">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M20 21a8 8 0 1 0-16 0" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#experience" class="sn-link" data-label="Experience">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="2" y="7" width="20" height="14" rx="2" />
+            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#projects" class="sn-link" data-label="Projects">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="7" height="7" rx="1" />
+            <rect x="14" y="3" width="7" height="7" rx="1" />
+            <rect x="3" y="14" width="7" height="7" rx="1" />
+            <rect x="14" y="14" width="7" height="7" rx="1" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#skills" class="sn-link" data-label="Skills">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="sn-link" data-label="Contact">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ════════════════════════════════════════
+       MAIN SPLIT LAYOUT
+  ════════════════════════════════════════ -->
+  <div class="split-layout">
+
+    <!-- ── LEFT PANEL (fixed) ── -->
+    <aside class="left-panel" id="leftPanel">
+
+      <!-- Background blobs inside left panel -->
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="lp-accent-ring"></div>
+      <div class="particles" id="particles"></div>
+
+      <!-- Photo -->
+      <!-- <div class="lp-photo-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=600&q=90&fit=crop&crop=faces"
+          alt="Ahmed Ahon"
+          class="lp-photo"
+        />
+        <div class="lp-photo-fade"></div>
+      </div> -->
+
+      <!-- Content overlay on top of photo -->
+      <div class="lp-content">
+
+        <!-- Badge -->
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for Opportunities
+        </div>
+
+        <!-- Name -->
+        <h1 class="hero-name">
+          <span class="name-line">Ahmed</span>
+          <span class="name-line name-accent">Ahon.</span>
+        </h1>
+
+        <!-- Titles -->
+        <p class="hero-titles">
+          <span class="title-chip">Founder · AfterTech</span>
+          <span class="title-divider">·</span>
+          <span class="title-chip">VP · CSSD</span>
+        </p>
+
+        <!-- Short desc -->
+        <p class="lp-desc">
+          Creative professional shaping experiences through design &amp; development from
+          <span class="text-accent">Dhaka, Bangladesh.</span>
+        </p>
+
+        <!-- CTA -->
+        <div class="lp-cta">
+          <a href="#projects" class="btn btn-primary lp-btn">View Work</a>
+          <a href="#contact" class="btn btn-ghost lp-btn">Contact</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="lp-stats">
+          <div class="lp-stat">
+            <span class="stat-num counter" data-target="500" data-suffix="+">0</span>
+            <span class="stat-label">Designs</span>
+          </div>
+          <div class="lp-stat-div"></div>
+          <div class="lp-stat">
+            <span class="stat-num counter" data-target="20" data-suffix="+">0</span>
+            <span class="stat-label">Collaborations</span>
+          </div>
+          <div class="lp-stat-div"></div>
+          <div class="lp-stat">
+            <span class="stat-num counter" data-target="3" data-suffix="+">0</span>
+            <span class="stat-label">Years</span>
+          </div>
+        </div>
+
+        <!-- Social handles -->
+        <div class="lp-socials">
+          <a href="https://linkedin.com/in/siamahmedahon" target="_blank" rel="noopener" class="lp-social-btn"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a href="https://x.com/siamahmedahon" target="_blank" rel="noopener" class="lp-social-btn"
+            aria-label="Twitter / X">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 4l16 16M4 20L20 4" />
+            </svg>
+          </a>
+          <a href="https://instagram.com/siamahmedahon" target="_blank" rel="noopener" class="lp-social-btn"
+            aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="#contact" class="lp-social-btn" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+          </a>
+        </div>
+
+      </div><!-- /lp-content -->
+
+      <!-- Vertical "scroll right" hint at bottom of left panel -->
+      <div class="lp-scroll-hint">
+        <div class="lp-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+
+    </aside><!-- /left-panel -->
+
+    <!-- ── RIGHT PANEL (scrollable) ── -->
+    <main class="right-panel" id="rightPanel">
+
+
+
+      <!-- ── ABOUT ── -->
+      <section class="section" id="about">
+        <br><br>
+        <div class="container">
+          <div class="about-split">
+            <div class="about-visual reveal-slide">
+              <div class="about-shapes">
+                <div class="ab-shape ab-shape-1"></div>
+                <div class="ab-shape ab-shape-2"></div>
+                <div class="ab-shape ab-shape-3"></div>
+                <div class="ab-shape ab-shape-ring"></div>
+              </div>
+
+              <div class="about-photo-wrap">
+                <img src="Untitled design.png" alt="Ahmed Ahon" class="about-photo" />
+                <div class="about-photo-fade"></div>
+              </div>
+            </div>
+            <div class="about-text">
+              <span class="section-tag reveal" style="max-width: 200px;">About Me</span>
+              <h2 class="about-heading reveal">
+                <span class="ah-line">Leading with </span>
+                <span class="ah-line ah-accent">clarity, building</span>
+                <span class="ah-line">with purpose.</span>
+              </h2>
+              <p class="about-body reveal">Founder of <strong>AfterTech</strong> , a tech media platform delivering
+                reliable and engaging
+                tech news with a growing audience of 5K+ followers. Vice President of CSSD, organizing three flagship
+                events and 8+ workshops featuring national and <strong>international professionals</strong>, creating
+                impactful learning
+                experiences for students.
+              </p>
+              <p class="about-body reveal"> Experienced in designing for international clients and driving digital
+                engagement.
+              </p>
+              <!-- <div class="about-pills reveal">
+                <span class="about-pill">⚡ Founder</span>
+                <span class="about-pill">🎨 Designer</span>
+                <span class="about-pill">🏅 VP</span>
+                <span class="about-pill">📍 Dhaka, BD</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br><br>
+
+      <!-- ── LOGO STRIP ── -->
+      <section class="logo-strip-section" id="home">
+        <div class="logo-strip-label">Worked &amp; Associated With</div>
+        <div class="logo-strip-track-wrap">
+          <div class="logo-strip-track">
+            <div class="logo-item"><img src="1.png" alt=""></div>
+            <div class="logo-item"><img src="2.png" alt=""></div>
+            <div class="logo-item"><img src="3.png" alt=""></div>
+            <div class="logo-item"><img src="4.png" alt=""></div>
+            <div class="logo-item"><img src="5.png" alt=""></div>
+            <div class="logo-item"><img src="6.png" alt=""></div>
+            <div class="logo-item"><img src="7.png" alt=""></div>
+            <div class="logo-item"><img src="1.png" alt=""></div>
+            <div class="logo-item"><img src="2.png" alt=""></div>
+            <div class="logo-item"><img src="3.png" alt=""></div>
+            <div class="logo-item"><img src="4.png" alt=""></div>
+            <div class="logo-item"><img src="5.png" alt=""></div>
+            <div class="logo-item"><img src="6.png" alt=""></div>
+            <div class="logo-item"><img src="7.png" alt=""></div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ── EXPERIENCE ── -->
+      <section class="section section-alt" id="experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag reveal">Experience</span>
+            <h2 class="section-title reveal">The roles that <span class="text-gradient">shaped me</span></h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-line">
+              <div class="timeline-line-fill" id="timelineFill"></div>
+            </div>
+            <div class="timeline-item reveal-slide">
+              <div class="timeline-dot">
+                <div class="dot-inner"></div>
+              </div>
+              <div class="timeline-card glass">
+                <div class="timeline-top"><span class="timeline-org">AfterTech</span><span class="timeline-period">2025
+                    — Present</span></div>
+                <h3 class="timeline-role">Founder & CEO</h3>
+                <p class="timeline-desc">Built and scaled a tech media platform reaching millions across digital
+                  channels. Content strategy, brand partnerships, community growth.</p>
+                <div class="timeline-tags"><span class="tag">Strategy</span><span class="tag">Content</span><span
+                    class="tag">Growth</span></div>
+              </div>
+            </div>
+            <div class="timeline-item reveal-slide" style="--d:0.1s">
+              <div class="timeline-dot">
+                <div class="dot-inner"></div>
+              </div>
+              <div class="timeline-card glass">
+                <div class="timeline-top"><span class="timeline-org">CSSD</span><span class="timeline-period">2024 —
+                    Present</span></div>
+                <h3 class="timeline-role">Vice President</h3>
+                <p class="timeline-desc">Leading organizational strategy and major event logistics. Collaborating with
+                  international professionals, managing workshops and partnerships.</p>
+                <div class="timeline-tags"><span class="tag">Leadership</span><span class="tag">Events</span><span
+                    class="tag">Collaboration</span></div>
+              </div>
+            </div>
+            <div class="timeline-item reveal-slide" style="--d:0.2s">
+              <div class="timeline-dot">
+                <div class="dot-inner"></div>
+              </div>
+              <div class="timeline-card glass">
+                <div class="timeline-top"><span class="timeline-org">nearU</span><span class="timeline-period">2024 —
+                    2025</span></div>
+                <h3 class="timeline-role">Creative Manager</h3>
+                <p class="timeline-desc">Co-founder & Creative Manager of NearU, where I worked on design and helped
+                  build and manage the platform’s overall online presence across different channels.</p>
+                <div class="timeline-tags"><span class="tag">Design</span><span class="tag">Online Presence</span><span
+                    class="tag">Strategy</span></div>
+              </div>
+            </div>
+            <div class="timeline-item reveal-slide" style="--d:0.3s">
+              <div class="timeline-dot">
+                <div class="dot-inner"></div>
+              </div>
+              <div class="timeline-card glass">
+                <div class="timeline-top"><span class="timeline-org">Cultural Classicists</span><span
+                    class="timeline-period">2023 — 2024</span></div>
+                <h3 class="timeline-role">Designer</h3>
+                <p class="timeline-desc">Graphic Designer at Cultural Classicists, where I designed key posters and had
+                  the opportunity to connect with industry professionals.</p>
+                <div class="timeline-tags"><span class="tag">Posters</span><span class="tag">Visuals</span><span
+                    class="tag">Networking</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SKILLS ── -->
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag reveal">Skills</span>
+            <h2 class="section-title reveal">What I bring to the <span class="text-gradient">table</span></h2>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card glass reveal-card" style="--card-i:0">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M20 21a8 8 0 1 0-16 0" />
+                </svg></div>
+              <h3>Leadership</h3>
+              <p>Guiding teams, driving missions, high-impact decisions.</p>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:92%"></div>
+              </div>
+            </div>
+            <div class="skill-card glass reveal-card" style="--card-i:1">
+              <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                </svg></div>
+              <h3>Graphic Design</h3>
+              <p>Crafting bold visuals that communicate and captivate.</p>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:88%"></div>
+              </div>
+            </div>
+            <div class="skill-card glass reveal-card" style="--card-i:2">
+              <div class="skill-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Web Development</h3>
+              <p>Minimalist web design and complex WordPress builds.</p>
+              <div class="skill-bar">
+                <div class="skill-fill" style="--w:85%"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROJECTS ── -->
+      <section class="section section-alt" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag reveal">Projects</span>
+            <h2 class="section-title reveal">Work I'm <span class="text-gradient">proud of</span></h2>
+          </div>
+          <div class="bento-grid">
+            <div class="bento-card bento-lg reveal-card" style="--card-i:0" data-title="AfterTech"
+              data-type="Tech Media Platform"
+              data-desc="AfterTech is a digital-first tech media platform covering innovation, startups, and digital culture in Bangladesh and beyond. Built from the ground up as a student founder, it grew from zero to 5K+ engaged followers with millions of combined impressions across platforms. AfterTech covers tech news, startup stories, digital trends, and career advice — making complex tech ideas accessible to a growing audience."
+              data-img="atweb.png" data-tags="Media · Content · Growth Hacking · Branding">
+              <img class="bento-img" src="AT team.jpeg" alt="AfterTech" loading="lazy" />
+              <div class="bento-overlay">
+                <div class="bento-meta"><span class="bento-type">Tech Media Platform</span>
+                  <div class="bento-tags"><span class="btag">5K+ Followers</span><span class="btag">1M+ Reach</span>
+                  </div>
+                </div>
+                <div class="bento-bottom">
+                  <h3 class="bento-title">AfterTech</h3><button class="bento-btn bento-popup-trigger">View <svg
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-card bento-tall reveal-card" style="--card-i:1" data-title="IGNITE1.0" data-type="Event"
+              data-desc="Led the concept and execution of IGNITE 1.0, an online initiative by GMMSC Career and Soft Skills Development Club, originally ideated to identify and recruit top designers and AI enthusiasts for our upcoming panel. The event received 130+ responses from students of our college, with strong participation across all segments. I also directed the design theme, building on my experience as a former content creator before stepping into the role of Vice President."
+              data-img="posterize.jpg" data-tags="Creative Direction · event management · Talent Acquisition">
+              <img class="bento-img" src="ignite.jpg" alt="Design Portfolio" loading="lazy" />
+              <div class="bento-overlay">
+                <div class="bento-meta"><span class="bento-type">Event</span></div>
+                <div class="bento-bottom">
+                  <h3 class="bento-title">IGNITE1.0</h3><button class="bento-btn bento-popup-trigger">View <svg
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-card bento-sm reveal-card" style="--card-i:2" data-title="Campus Ambassador"
+              data-type="Campus Ambassador"
+              data-desc="Honored to serve as a Campus Ambassador for the Notre Dame Math Olympiad 2025, securing 17th place among 108 CAs. Proud to have facilitated a club partnership between GMMSC Career and Soft Skills Development Club and the NDC Math Club—truly a rewarding learning experience!"
+              data-img="ndcmc.jpeg" data-tags="Leadership · Partnership Building">
+              <img class="bento-img" src="ndcgp.jpeg" alt="Campus Ambassador" loading="lazy" />
+              <div class="bento-overlay">
+                <div class="bento-meta"><span class="bento-type">Campus Ambassador</span></div>
+                <div class="bento-bottom">
+                  <h3 class="bento-title">NDC Math Fest</h3><button class="bento-btn bento-popup-trigger">View <svg
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bento-card bento-sm reveal-card" style="--card-i:3" data-title="দিবরাত্রি শিল্পায়ন"
+              data-type="Youth Delegate"
+              data-desc="Honoured to serve as a youth delegate at দিবরাত্রি শিল্পায়ন, where I contributed as a graphic designer and created the key banner for their flagship event, while collaborating closely with the team and enhancing my skills in creativity, teamwork, and event design."
+              data-img="anime.png" data-tags="Events · Graphic Design">
+              <img class="bento-img" src="yd.jpeg" alt="Youth Delegate" loading="lazy" />
+              <div class="bento-overlay">
+                <div class="bento-meta"><span class="bento-type">Youth Delegate</span></div>
+                <div class="bento-bottom">
+                  <h3 class="bento-title">দিবরাত্রি শিল্পায়ন</h3><button class="bento-btn bento-popup-trigger">View <svg
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CERTIFICATIONS ── -->
+      <section class="section" id="certifications">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag reveal">Certifications</span>
+            <h2 class="section-title reveal">Validated <span class="text-gradient">expertise</span></h2>
+          </div>
+
+
+          <!-- ── CERTIFICATE PHOTO CAROUSEL ── -->
+          <div class="cert-carousel-wrap">
+            <div class="cert-carousel-fade-left"></div>
+            <div class="cert-carousel-fade-right"></div>
+
+            <div class="cert-carousel" id="certCarousel">
+              <!-- Replace src values with your actual certificate image paths -->
+              <div class="cert-slide">
+                <img src="nearu.jpeg" alt="Certificate 4" />
+              </div>
+              <div class="cert-slide">
+                <img src="uylab.jpeg" alt="Certificate 4" />
+              </div>
+              <div class="cert-slide">
+                <img src="Specialmentiontct.jpeg" alt="Certificate 1" />
+              </div>
+              <div class="cert-slide">
+                <img src="pioneerhunt.jpeg" alt="Certificate 2" />
+              </div>
+              <div class="cert-slide">
+                <img src="Siam Ahmed Ahon.png" alt="Certificate 3" />
+              </div>
+              <div class="cert-slide">
+                <img src="aftertech.jpeg" alt="Certificate 5" />
+              </div>
+              <div class="cert-slide">
+                <img src="ditc.jpeg" alt="Certificate 5" />
+              </div>
+              <div class="cert-slide">
+                <img src="startup and e.png" alt="Certificate 3" />
+              </div>
+              <div class="cert-slide">
+                <img src="ulab.jpeg" alt="Certificate 5" />
+              </div>
+              <div class="cert-slide">
+                <img src="cybers.jpg" alt="Certificate 5" />
+              </div>
+            </div>
+
+            <!-- Prev / Next buttons -->
+            <button class="cert-arrow cert-arrow-prev" id="certPrev" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+            <button class="cert-arrow cert-arrow-next" id="certNext" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+
+            <!-- Dot indicators -->
+            <div class="cert-dots" id="certDots"></div>
+          </div>
+
+
+
+
+          <div class="cert-grid">
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACT ── -->
+      <section class="section section-alt" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag reveal">Contact</span>
+            <h2 class="section-title reveal">Let's build something <span class="text-gradient">together</span></h2>
+            <p class="section-subtitle reveal">Open to collaborations, partnerships, and conversations.</p>
+          </div>
+          <div class="contact-layout">
+            <div class="contact-info reveal-slide">
+              <div class="contact-links">
+                <a href="mailto:ahmedahon@example.com" class="contact-link glass">
+                  <div class="contact-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="1.5">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg></div>
+                  <div><span class="contact-link-label">Email</span><span
+                      class="contact-link-value">siamahmedahon@gmail.com</span></div>
+                </a>
+                <a href="https://linkedin.com/in/siamahmedahon" target="_blank" rel="noopener"
+                  class="contact-link glass">
+                  <div class="contact-link-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="1.5">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                      <rect x="2" y="9" width="4" height="12" />
+                      <circle cx="4" cy="4" r="2" />
+                    </svg></div>
+                  <div><span class="contact-link-label">LinkedIn</span><span
+                      class="contact-link-value">linkedin.com/in/siamahmedahon</span></div>
+                </a>
+              </div>
+              <div class="contact-availability glass">
+                <div class="avail-dot"></div>
+                <div><strong>Currently available</strong>
+                  <p>Open to internships, collaborations, and speaking.</p>
+                </div>
+              </div>
+            </div>
+            <form class="contact-form glass reveal-slide" id="contactForm" style="--d:0.15s"
+              action="https://formspree.io/f/mbdzppwg" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="New message from Ahmed Ahon Portfolio" />
+              <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name"
+                  placeholder="Your name" required /></div>
+              <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email"
+                  placeholder="your@email.com" required /></div>
+              <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5"
+                  placeholder="Tell me about your project..." required></textarea></div>
+              <div class="form-status" id="formStatus"></div>
+              <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FOOTER ── -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-inner">
+            <div class="footer-logo"><span class="logo-bracket">[</span>AA<span class="logo-bracket">]</span></div>
+            <p class="footer-copy">© 2025 Ahmed Ahon. Crafted with intention.</p>
+            <div class="footer-socials">
+              <a href="https://linkedin.com/in/siamahmedahon" target="_blank" rel="noopener" aria-label="LinkedIn"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </main><!-- /right-panel -->
+
+  </div><!-- /split-layout -->
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6" />
+    </svg>
+  </button>
+
+  <!-- Mobile Hamburger -->
+  <button class="mob-hamburger" id="mobHamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mob-nav-overlay" id="mobNavOverlay">
+    <ul class="mob-nav-links">
+      <li><a href="#home" class="mob-nav-link">Home</a></li>
+      <li><a href="#about" class="mob-nav-link">About</a></li>
+      <li><a href="#experience" class="mob-nav-link">Experience</a></li>
+      <li><a href="#projects" class="mob-nav-link">Projects</a></li>
+      <li><a href="#skills" class="mob-nav-link">Skills</a></li>
+      <li><a href="#contact" class="mob-nav-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ── PROJECT POPUP MODAL ── -->
+  <div class="project-popup-backdrop" id="projectPopupBackdrop"></div>
+  <div class="project-popup" id="projectPopup">
+    <!-- Image: left half, no bezel -->
+    <div class="pp-image-wrap">
+      <img src="" alt="" class="pp-image" id="ppImage" />
+    </div>
+    <!-- Content: right side -->
+    <div class="pp-content">
+      <button class="pp-close" id="ppClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <span class="pp-type" id="ppType"></span>
+      <h2 class="pp-title" id="ppTitle"></h2>
+      <p class="pp-desc" id="ppDesc"></p>
+      <div class="pp-tags" id="ppTags"></div>
+      <a href="#contact" class="btn btn-primary pp-cta" id="ppCta">
+        <span>Start a project -</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
